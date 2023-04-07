@@ -11,9 +11,9 @@ export default function decorate(block) {
     });
     ul.append(li);
   });*/
-  const h2 = document.createElement('h2');
-  h2.innerHTML = "Components on this page :";
-  block.append(h2);
+  const label = document.createElement('div');
+  label.innerHTML = 'Components on this page :';
+  block.append(label);
   document.querySelectorAll('.block').forEach((block) => {
     const li = document.createElement('li');
     li.innerHTML = block.getAttribute('data-block-name');

@@ -12,7 +12,7 @@
   background-color: #ff0000
 }
 
-.menu > h2 {
+.menu > div {
   border: 1px solid var(--highlight-background-color);
   background-color: #ff0000
 }
