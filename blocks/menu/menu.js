@@ -14,7 +14,7 @@ export default function decorate(block) {
 
   document.querySelectorAll('.block').forEach((block) => {
     const li = document.createElement('li');
-    li.innerHTML = block.outerHTML;
+    li.innerHTML = block.getAttribute("data-block-name");
     ul.append(li);
   });
 
