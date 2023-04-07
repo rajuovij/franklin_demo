@@ -11,11 +11,11 @@ export default function decorate(block) {
     });
     ul.append(li);
   });*/
-  const ul1 = document.createElement('ul');
+  //const ul1 = document.createElement('ul');
   const li1 = document.createElement('li');
   li1.innerHTML = 'Components on this page :';
-  ul1.append(li1);
-  block.append(ul1);
+  ul.append(li1);
+  //block.append(ul1);
   document.querySelectorAll('.block').forEach((block) => {
     const li = document.createElement('li');
     li.innerHTML = block.getAttribute('data-block-name');
