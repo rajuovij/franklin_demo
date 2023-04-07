@@ -49,7 +49,7 @@ export default function decorate(block) {
     const li = document.createElement('li');
     li.innerHTML = row.innerHTML;
     [...li.children].forEach((div) => {
-      div.className = 'carousel-v1-image';
+      if (div.children.length === 1 && div.querySelector('picture'))  div.className = 'carousel-v1-image';
       
     });
     ul.append(li);
@@ -57,4 +57,10 @@ export default function decorate(block) {
   ul.querySelectorAll('img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
   block.textContent = '';
   block.append(ul);
+  const aNext = document.createElement('a');
+  const aPrevious = document.createElement('a');
+  aNext.className = 'next';
+  aPrevious.className = 'prev';
+  block.append(aNext);
+  block.append(aNexaPrevioust);
 }
