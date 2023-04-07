@@ -1,18 +1,16 @@
 import { createOptimizedPicture } from '../../scripts/lib-franklin.js';
 
 export default function decorate(block) {
-  //const ul = document.createElement('div');
-  //ul.className = 'carousel-v1-image';
+  const ul = document.createElement('div');
+  ul.className = 'carousel-v1-image';
   [...block.children].forEach((row) => {
     const li = document.createElement('div');
     li.innerHTML = row.innerHTML;
-    li.className = 'carousel-v1-image';
-    /*[...li.children].forEach((div) => {
-      //if (div.children.length === 1 && div.querySelector('picture'))  
-      div.innnerHTML = row;
-      div.className = 'carousel-v1-image';
+    
+    //[...li.children].forEach((div) => {
+      //if (div.children.length === 1 && div.querySelector('picture'))  div.className = 'carousel-v1-image';
       
-    });*/
+    //});
     ul.append(li);
   });
   ul.querySelectorAll('img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
@@ -27,7 +25,7 @@ export default function decorate(block) {
   block.append(aPrevious);*/
 
   const carouselSlide = document.querySelector(".carousel-v1-image");
-  const carouselImages = document.querySelectorAll(".carousel-v1-image picture");
+  const carouselImages = document.querySelectorAll(".carousel-v1-image div");
 
   // Set up the automatic loop
 let slideIndex = 0;
