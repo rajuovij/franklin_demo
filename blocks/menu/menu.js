@@ -12,7 +12,7 @@ export default function decorate(block) {
     ul.append(li);
   });*/
 
-  document.querySelectorAll('.block').forEach(block) => {
+  document.querySelectorAll('.block').forEach((block) => {
     const li = document.createElement('li');
     li.innerHTML = block.outerHTML;
     ul.append(li);
