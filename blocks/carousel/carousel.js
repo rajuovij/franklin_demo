@@ -58,10 +58,10 @@ export default function decorate(block) {
     }
   });
 
-  //const aNext = document.createElement('a');
-  //const aPrevious = document.createElement('a');
-  //aNext.className = 'next';
-  //aPrevious.className = 'prev';
-  //block.append(aNext);
-  //block.append(aPrevious);
+  const aNext = document.createElement('a');
+  const aPrevious = document.createElement('a');
+  aNext.className = 'next';
+  aPrevious.className = 'prev';
+  block.append(aNext);
+  block.append(aPrevious);
 }
