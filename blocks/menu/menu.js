@@ -14,7 +14,8 @@ export default function decorate(block) {
 
   document.querySelectorAll('.block').forEach((block) => {
     const li = document.createElement('li');
-    li.innerHTML = block.getAttribute("data-block-name");
+    li.innerHTML = block.getAttribute('data-block-name');
+    li.onclick = function() { alert(block.getAttribute('data-block-name')); document.querySelectorAll(`section ."${block.getAttribute('data-block-name')}"-container`).scrollIntoView(); };
     ul.append(li);
   });
 
