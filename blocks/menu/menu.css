@@ -1,5 +1,5 @@
 .menu > ul {
-  list-style: none;
+  list-style: decimal;
   margin: 0;
   padding: 0;
   display: inline-grid;
@@ -9,7 +9,12 @@
 
 .menu > ul > li {
   border: 1px solid var(--highlight-background-color);
-  background-color: var(--background-color)
+  background-color: #ff0000
+}
+
+.menu > h2 {
+  border: 1px solid var(--highlight-background-color);
+  background-color: #ff0000
 }
 
 .menu .menu-body {
