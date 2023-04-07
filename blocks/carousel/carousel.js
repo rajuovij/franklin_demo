@@ -6,7 +6,7 @@ export default function decorate(block) {
   [...block.children].forEach((row) => {
     const li = document.createElement('div');
     li.innerHTML = row.innerHTML;
-    ul.className = 'carousel-v1-image';
+    li.className = 'carousel-v1-image';
     /*[...li.children].forEach((div) => {
       //if (div.children.length === 1 && div.querySelector('picture'))  
       div.innnerHTML = row;
