@@ -24,7 +24,7 @@ export default function decorate(block) {
   block.append(aNext);
   block.append(aPrevious);*/
 
-  const carouselSlide = document.querySelector(".carousel");
+  const carouselSlide = document.querySelector(".carousel-v1-image");
   const carouselImages = document.querySelectorAll(".carousel-v1-image picture");
 
   // Set up the automatic loop
