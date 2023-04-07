@@ -1,15 +1,15 @@
 import { createOptimizedPicture } from '../../scripts/lib-franklin.js';
 
 export default function decorate(block) {
-  const ul = document.createElement('ul');
+  const ul = document.createElement('div');
   [...block.children].forEach((row) => {
-    const li = document.createElement('li');
+    const li = document.createElement('div');
     li.innerHTML = row.innerHTML;
     li.className = 'carousel-v1-image';
-    [...li.children].forEach((div) => {
+    //[...li.children].forEach((div) => {
       //if (div.children.length === 1 && div.querySelector('picture'))  div.className = 'carousel-v1-image';
       
-    });
+    //});
     ul.append(li);
   });
   ul.querySelectorAll('img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
