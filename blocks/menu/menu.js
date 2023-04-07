@@ -11,7 +11,9 @@ export default function decorate(block) {
     });
     ul.append(li);
   });*/
-
+  const h2 = document.createElement('h2');
+  h2.innerHTML = "Components on this page :";
+  block.append(h2);
   document.querySelectorAll('.block').forEach((block) => {
     const li = document.createElement('li');
     li.innerHTML = block.getAttribute('data-block-name');
@@ -20,6 +22,6 @@ export default function decorate(block) {
   });
 
   //ul.querySelectorAll('img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
-  block.textContent = 'Components on page';
+  block.textContent = '';
   block.append(ul);
 }
