@@ -1,7 +1,7 @@
 import { createOptimizedPicture } from '../../scripts/lib-franklin.js';
 
 export default function decorate(block) {
-  const carouselSlide = document.querySelector(".carousel");
+  /*const carouselSlide = document.querySelector(".carousel");
   const carouselImages = document.querySelectorAll(".carousel-v1-image picture");
 
   // Buttons
@@ -42,7 +42,7 @@ export default function decorate(block) {
       counter = carouselImages.length - counter;
       carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)";
     }
-  });
+  });*/
 
   const ul = document.createElement('ul');
   [...block.children].forEach((row) => {
@@ -57,10 +57,10 @@ export default function decorate(block) {
   ul.querySelectorAll('img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
   block.textContent = '';
   block.append(ul);
-  const aNext = document.createElement('a');
-  const aPrevious = document.createElement('a');
-  aNext.className = 'next';
-  aPrevious.className = 'prev';
-  block.append(aNext);
-  block.append(aNexaPrevioust);
+  //const aNext = document.createElement('a');
+  //const aPrevious = document.createElement('a');
+  //aNext.className = 'next';
+  //aPrevious.className = 'prev';
+  //block.append(aNext);
+  //block.append(aPrevious);
 }
