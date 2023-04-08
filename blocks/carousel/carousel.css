@@ -3,35 +3,23 @@
   width: 100%;
   height: 400px;
   overflow: hidden;
+  max-width: 750px;
+  margin-inline: auto;
 }
 
 .carousel-v1-image {
   display: flex;
   width: 100%;
   height: 100%;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.9s ease-in-out;
 }
 
-.carousel-v1-image > picture > img {
-  width: 100%;
-  height: 100%;
+.carousel-v1-image > div > div > picture > img {
+  width: auto;
+  height: auto;
   object-fit: cover;
   max-width:none;
 }
 
-.carousel-v1-image picture {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  object-fit: cover;
-  box-sizing: border-box;
-}
 
-.carousel-v1-image img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
+

@@ -3,12 +3,12 @@
   margin: 0;
   padding: 0;
   display: inline-grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 16px;
 }
 
 .menu > ul > li {
-  border: 1px solid var(--highlight-background-color);
+  /*border: 1px solid var(--highlight-background-color);*/
   background-color: var(--overlay-background-color);
   cursor: pointer;
   color: rgb(0,0,255);
@@ -17,8 +17,8 @@
 }
 
 .menu > div {
-  border: 1px solid var(--highlight-background-color);
-  background-color: #ff0000
+  /*border: 1px solid var(--highlight-background-color);
+  background-color: #ff0000*/
 }
 
 .menu .menu-body {

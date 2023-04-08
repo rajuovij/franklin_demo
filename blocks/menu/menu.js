@@ -12,9 +12,9 @@ export default function decorate(block) {
     ul.append(li);
   });*/
   //const ul1 = document.createElement('ul');
-  const li1 = document.createElement('li');
-  li1.innerHTML = 'Components on this page :';
-  ul.append(li1);
+  //const li1 = document.createElement('li');
+  //li1.innerHTML = 'Components on this page :';
+  //ul.append(li1);
   //block.append(ul1);
   document.querySelectorAll('.block').forEach((block) => {
     const li = document.createElement('li');
@@ -24,6 +24,6 @@ export default function decorate(block) {
   });
 
   //ul.querySelectorAll('img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
-  block.textContent = '';
+  block.textContent = 'Components on this page :-> ';
   block.append(ul);
 }

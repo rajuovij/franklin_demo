@@ -29,7 +29,7 @@ export default function decorate(block) {
 
   // Set up the automatic loop
 let slideIndex = 0;
-const slideInterval = setInterval(nextSlide, 10000);
+const slideInterval = setInterval(nextSlide, 2000);
 
 // Move the carousel to the next slide
 function nextSlide() {
